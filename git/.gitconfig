@@ -40,6 +40,8 @@
   fuckoff = checkout -- .
   ignore-committed = update-index --assume-unchanged
 
+[core]
+  editor = vim
 [push]
   followTags = true
   default = simple
@@ -49,4 +51,3 @@
   rebase = false
 [init]
   defaultBranch = main
-

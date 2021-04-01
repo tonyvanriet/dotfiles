@@ -9,7 +9,7 @@
       "base16-tomorrow-dark-theme"
     ]
   editor:
-    fontSize: 16
+    fontSize: 15
   "exception-reporting":
     userId: "7e77226d-493a-430a-b785-d48a79eb32c8"
   github:
