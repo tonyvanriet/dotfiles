@@ -1,5 +1,9 @@
 source ~/.config/fish/aliases.fish
 
+# idempotently add to global fish_user_paths
+# can use `fish_add_path` once I bump to fish 3.2
+contains ~/.cargo/bin $fish_user_paths; or set -Ua fish_user_paths ~/.cargo/bin
+
 cd ~/dev-tools/code
 
 if test -d ~/.asdf
