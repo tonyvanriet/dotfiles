@@ -5,6 +5,29 @@ funcsave h
 alias cr="clear"
 funcsave cr
 
+# git
+alias gs="git status"
+funcsave gs
+
+function gcn --description 'clone a repo from NFIBrokerage'
+  git clone git@github.com:NFIBrokerage/$argv
+end
+
+function gho
+  set git_remote_url (git config --get remote.origin.url)
+  if test $git_remote_url
+    set http_url (string replace 'git@github.com:' 'https://github.com/' $git_remote_url)
+    open $http_url
+  else
+    echo Not a repo
+  end
+end
+
+function purge --description 'Delete all local branches that are already merged to current branch (excludes main and master)'
+  command git branch --merged | grep -v "\*" | grep -v "master" | grep -v "main" | xargs -n 1 git branch -d
+  command git remote prune origin
+end
+
 # mix
 alias mff="mix format --check-formatted"
 funcsave mff
@@ -21,10 +44,6 @@ alias mch="mix coveralls.html"
 function iet --description 'iex in test mode'
   set -lx MIX_ENV test
   iex $argv
-end
-
-function gcn --description 'clone a repo from NFIBrokerage'
-  git clone git@github.com:NFIBrokerage/$argv
 end
 
 # idempotently add to global fish_user_paths
@@ -70,19 +89,4 @@ function col
   cd ~/dev-tools-colonel
   sudo vagrant up colonel --provider=docker
   sudo vagrant docker-exec colonel -it -- /bin/bash
-end
-
-function gho
-  set git_remote_url (git config --get remote.origin.url)
-  if test $git_remote_url
-    set http_url (string replace 'git@github.com:' 'https://github.com/' $git_remote_url)
-    open $http_url
-  else
-    echo Not a repo
-  end
-end
-
-function purge --description 'Delete all local branches that are already merged to current branch (excludes main and master)'
-  command git branch --merged | grep -v "\*" | grep -v "master" | grep -v "main" | xargs -n 1 git branch -d
-  command git remote prune origin
 end
