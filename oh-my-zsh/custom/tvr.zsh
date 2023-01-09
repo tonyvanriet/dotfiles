@@ -1,3 +1,5 @@
+# ln -s  ~/dotfiles/oh-my-zsh/custom/tvr.zsh ~/.oh-my-zsh/custom
+
 export KERL_CONFIGURE_OPTIONS="--without-wx"
 
 alias ll='ls -alF'
