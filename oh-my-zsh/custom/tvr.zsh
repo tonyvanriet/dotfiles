@@ -20,15 +20,8 @@ mhb () {
   mix bless
 }
 
-gcn () {
+gcnfi () {
   git clone git@github.com:NFIBrokerage/$1
-}
-
-gcnb () {
-  # set -e
-  gcn $1
-  cd $1
-  mhb
 }
 
 purge () {
