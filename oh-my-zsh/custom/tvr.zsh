@@ -35,4 +35,8 @@ mtw () {
   fswatch lib test | mix test $1 --stale --listen-on-stdin
 }
 
+opc () {
+  op item get $1 --fields label=password --account cuatro.1password.com --vault Shared
+}
+
 cd ~/dev-tools/code
