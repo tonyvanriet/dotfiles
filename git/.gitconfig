@@ -1,6 +1,6 @@
 [user]
 	name = Tony van Riet
-	email = tony.van.riet@nfiindustries.com
+	email = tonyvanriet@gmail.com
 
 [alias]
   git = !exec git
