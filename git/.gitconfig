@@ -1,6 +1,7 @@
 [user]
 	name = Tony van Riet
 	email = tonyvanriet@gmail.com
+	signingkey = /Users/tonyvanriet/.ssh/id_ed25519.pub
 
 [alias]
   git = !exec git
@@ -51,3 +52,9 @@
   rebase = false
 [init]
   defaultBranch = main
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	allowedSignersFile = /Users/tonyvanriet/.ssh/allowed_signers
+[commit]
+	gpgsign = true
