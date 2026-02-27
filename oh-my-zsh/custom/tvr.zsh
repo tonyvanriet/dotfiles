@@ -21,5 +21,12 @@ opc () {
   op item get $1 --fields label=password --account vanriet.1password.com --vault Shared
 }
 
-cd ~/code
+unsetopt SHARE_HISTORY
 
+export EDITOR="zed"
+
+eval "$(direnv hook zsh)"
+
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+
+cd ~/code/fivetro/lookout

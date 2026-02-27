@@ -1,7 +1,12 @@
 ## Development
 
 - Don't use a devcontainer, even if the project documentation provides instructions on using the devcontainer. Run mix commands directly on my host.
-- If you're going to run a `mix` command on a project, always run `mix deps.get` beforehand. 
+- If you're going to run a `mix` command on a project, always run `mix deps.get` beforehand.
+- If Postgres is unreachable (connection refused on localhost:5432), start it with: `podman machine start && podman start pgdev`
+- Never commit or push to main or master without my explicit approval.
+- When creating a PR, always create a draft PR by default and open it in my browser.
+- Do not add attribution or bylines in the content of any files, comments, or PR descriptions. Co-author on the commit is fine.
+- When creating a PR, the description should be a summary of the changes made. If you create a "Test Plan", put it in a subsequent PR comment.
 
 ## Plans
 
