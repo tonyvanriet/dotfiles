@@ -8,6 +8,8 @@ alias lg='lazygit'
 
 alias ghb='gh browse'
 
+alias c='claude'
+
 purge () {
   git branch --merged | egrep -v "(^\*|master|main)" | xargs git branch -d
   git remote prune origin
