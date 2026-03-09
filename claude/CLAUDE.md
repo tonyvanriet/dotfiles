@@ -18,3 +18,5 @@
 ## Focus
 
 - Don't ever make extra code changes to solve problems that you find that are unrelated to the piece of work we're focused on. Instead, mention the problem and ask me if I want to create a new Github issue for it.
+
+@RTK.md
