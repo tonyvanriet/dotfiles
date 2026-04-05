@@ -30,5 +30,3 @@ export EDITOR="zed"
 eval "$(direnv hook zsh)"
 
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
-
-cd ~/code/fivetro/lookout
