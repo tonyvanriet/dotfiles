@@ -32,6 +32,8 @@
 	<real>0.05000000074505806</real>
 	<key>Default Bookmark Guid</key>
 	<string>C09334F7-792C-4F61-A6DB-B0C46A530165</string>
+	<key>EnableAPIServer</key>
+	<false/>
 	<key>EnableDivisionView</key>
 	<true/>
 	<key>HapticFeedbackForEsc</key>
