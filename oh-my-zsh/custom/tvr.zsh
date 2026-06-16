@@ -27,6 +27,11 @@ unsetopt SHARE_HISTORY
 
 export EDITOR="zed"
 
-eval "$(direnv hook zsh)"
+export FNOX_AGE_KEY_FILE=~/.config/fnox/age.txt
+eval "$(fnox activate zsh)"     # (_fnox)
+eval "$(direnv hook zsh)"        # (_direnv _fnox)  → direnv runs first ✅
+eval "$(mise activate zsh)"      # (_mise _direnv _fnox)
 
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+
+source <(~/code/iac/scripts/prod.sh --completion zsh)

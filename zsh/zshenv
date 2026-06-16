@@ -1,0 +1,4 @@
+# ln -s ~/dotfiles/zsh/zshenv ~/.zshenv
+#
+# mise shims give non-interactive shells (agents, editors, scripts) the repo-pinned tool versions.
+export PATH="$HOME/.local/share/mise/shims:$PATH"
