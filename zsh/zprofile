@@ -1,0 +1,7 @@
+# ln -s ~/dotfiles/zsh/zprofile ~/.zprofile
+
+eval "$(/opt/homebrew/bin/brew shellenv zsh)"
+# Re-assert mise's PATH after brew shellenv, which otherwise wins the
+# ordering race against the mise shims set in ~/.zshenv (login shells only;
+# non-interactive ones never reach ~/.zshrc's mise activate in tvr.zsh).
+eval "$(/opt/homebrew/bin/mise activate zsh)"
